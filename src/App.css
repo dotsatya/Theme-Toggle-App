@@ -1,0 +1,181 @@
+:root {
+
+   /*========= Theme Colors for light =========*/
+  --bg-dark: hsl(0 0% 90%);
+  --bg: hsl(300 0% 95%);
+  --bg-light: hsl(300 50% 100%);
+
+  --title-color-dark: hsl(0 0% 4%);
+  --title-color: hsl(0 0% 28%);
+  --text-color: hsl(0, 0%, 38%);
+
+  --highlight: hsl(300 50% 100%);
+  --border: hsl(0, 0%, 80%);
+  --border-muted: hsl(340 0% 62%);
+
+  --primary: hsl(318 38% 30%);
+  --secondary: hsl(160 100% 13%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+
+   /*========= Font and typography =========*/
+  --body-font: "Poppins", sans-serif;
+
+  /* .5rem = 8px | 1rem = 16px ... */
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /*========== Font weight ==========*/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margins Bottom ==========*/
+  /* .5rem = 8px | 1rem = 16px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+   /*========= Theme Colors for Dark =========*/
+[data-theme="dark"] {
+  --bg-dark: hsl(336 0% 1%);
+  --bg: hsl(300 0% 4%);
+  --bg-light: hsl(0 0% 9%);
+
+  --title-color-dark: hsl(300 0% 98%);
+  --title-color: hsl(300 0% 90%);
+  --text-color: hsl(0, 1%, 60%);
+
+  --highlight: hsl(330 0% 39%);
+  --border: hsl(0 0% 28%);
+  --border-muted: hsl(300 0% 18%);
+
+  --primary: hsl(320 50% 73%);
+  --secondary: hsl(149 41% 62%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+}
+
+
+
+/*========== Responsive typography ==========*/
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/* body { */
+  /* color: var(--text-color); */
+  /* background-color: var(--body-color); */
+  /* margin: 0; */
+  /* Add this */
+  /* padding: 0; */
+  /* Add this */
+/* } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #363636;
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  transform: translateY(0);
+}
+
+button:hover {
+  background-color: #4f4f4f;
+  transform: scale(1.01);
+  transform: translateY(2px); 
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}

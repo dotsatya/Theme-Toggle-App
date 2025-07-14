@@ -1,0 +1,85 @@
+.boxes{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.box{
+/* flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 200px; */
+flex: 1 1 auto;
+}
+:root {
+  /* --border: rgba(255, 255, 255, 0.2); */
+  --gradient: linear-gradient(45deg, var(--text-color), var(--title-color), var(--title-color-dark));
+}
+
+.box {
+  --start: 0;
+  border: .5px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  /* height: 200px; */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Glowing border layer */
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--gradient);
+  background-attachment: fixed;
+
+  /* Mask creates directional glow */
+  mask: 
+    linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start, 0) - 15) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  -webkit-mask-clip: padding-box, border-box;
+  mask-clip: padding-box, border-box;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Remove the real border on hover */
+.box:hover {
+  /* border-color: transparent; */
+}
+
+/* Show the border glow on hover */
+.box:hover::before {
+  opacity: 1;
+}
+
+
+
+
+h2{
+  color: var(--title-color-dark);
+  margin: 0;
+}
+h3{
+  color: var(--title-color);
+  margin: 0;
+}
+p{
+  color: var(--text-color);
+  font-weight: 500;
+}
+
